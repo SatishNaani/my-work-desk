@@ -40,6 +40,7 @@ function MainContent() {
                                     m: 1,
                                     width: 270,
                                     height: 128,
+                                    position: 'relative'
                                 },
                             }}
                        >

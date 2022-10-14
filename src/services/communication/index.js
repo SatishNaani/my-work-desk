@@ -47,7 +47,7 @@ export async function get(url, loading = true) {
         : axiosInstance.get(url);
 }
 
-export async function post(url, model?: any, loading = true) {
+export async function post(url, model, loading = true) {
     return loading
         ? trackPromise(axiosInstance.post(url, model))
         : axiosInstance.post(url, model);

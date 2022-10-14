@@ -17,7 +17,7 @@ function NotificationsCount() {
                 opacity: [0.9, 0.8, 0.7],
             }
         }}>
-            <label style={{top: '155px'}} className="itemType">Notifications</label>
+            <label className="itemType">Notifications</label>
             <label style={{fontSize: '40px', color: "#256f3a", textOverflow: 'ellipsis'}}>121</label>
         </Paper>
 
