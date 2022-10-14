@@ -39,7 +39,6 @@ function UserDetails() {
 
                     <MenuList>
                         <MenuItem style={{
-                            background: 'rgba(0, 0, 0, 0.04)',
                             borderBottom: '1px solid rgba(0, 0, 0, 0.09)'
                         }}>
                             <Typography variant="inherit" noWrap>
@@ -47,7 +46,6 @@ function UserDetails() {
                             </Typography>
                         </MenuItem>
                         <MenuItem style={{
-                            background: 'rgba(0, 0, 0, 0.04)',
                             borderBottom: '1px solid rgba(0, 0, 0, 0.09)'
                         }}>
                             <Typography variant="inherit" noWrap>
@@ -55,7 +53,6 @@ function UserDetails() {
                             </Typography>
                         </MenuItem>
                         <MenuItem style={{
-                            background: 'rgba(0, 0, 0, 0.04)',
                             borderBottom: '1px solid rgba(0, 0, 0, 0.09)'
                         }}>
                             <Typography variant="inherit" noWrap>
@@ -63,7 +60,6 @@ function UserDetails() {
                             </Typography>
                         </MenuItem>
                         <MenuItem style={{
-                            background: 'rgba(0, 0, 0, 0.04)',
                             borderBottom: '1px solid rgba(0, 0, 0, 0.09)'
                         }}>
                             <Typography variant="inherit" noWrap>

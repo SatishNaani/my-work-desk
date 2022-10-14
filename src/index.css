@@ -129,3 +129,7 @@ html,
 .tableTitle{
     margin: 18px!important;
 }
+
+.MuiTableCell-head{
+    background-color: rgba(0, 0, 0, 0.06)!important;
+}
