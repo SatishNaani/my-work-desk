@@ -66,7 +66,9 @@ const ResponsiveAppBar = () => {
                     }}>
                         Welcome to vistex work desk
                     </Typography>
-                    <LogoutIcon/>
+                    <Button variant="contained" endIcon={<LogoutIcon />}/>
+
+
                 </Toolbar>
             </AppBar>
         </Box>
