@@ -12,7 +12,7 @@ function stringAvatar(name) {
 
 function NavBar() {
 
-
+    const [userData, setUserData] = React.useState({});
     return (
         <div className="navigationBar" style={{position: "fixed", zIndex: 50, height: '100%'}}>
             <Box sx={{
@@ -20,13 +20,13 @@ function NavBar() {
                 height: '100%',
                 backgroundColor: 'white',
                 '& > :not(style)': {
-                   width: '100%',
+                    width: '100%',
                     height: '100%',
                 },
 
             }}>
                 <Paper elevation={24} sx={{
-                    boxShadow:'0px 11px 15px -7px rgb(0 0 0 / 20%), 0px 24px 38px 3px rgb(0 0 0 / 4%), 0px 9px 46px 8px rgb(0 0 0 / 2%)',
+                    boxShadow: '0px 11px 15px -7px rgb(0 0 0 / 20%), 0px 24px 38px 3px rgb(0 0 0 / 4%), 0px 9px 46px 8px rgb(0 0 0 / 2%)',
                     width: 218,
                     height: '100%',
                     backgroundColor: 'white'
@@ -34,11 +34,12 @@ function NavBar() {
                     <div style={{width: '220px', top: '50px', position: 'relative'}}>
                         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
                             <Stack direction="row" spacing={2}>
-                                <Avatar style ={{background:'#1976d2'}} {...stringAvatar('Satish Medhuri')} sx={{width: 85, height: 85}}/>
+                                <Avatar style={{background: '#1976d2'}} {...stringAvatar('Default User')}
+                                        sx={{width: 85, height: 85}}/>
                             </Stack>
                         </div>
                     </div>
-                    <UserDetails/>
+                    <UserDetails userData={userData}/>
 
                 </Paper>
 

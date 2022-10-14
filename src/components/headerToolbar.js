@@ -17,13 +17,13 @@ const onMenuItemClick = (oEvt,a,selected)=>{
     if(!selected){
         navBar.style.display ='none'
         mainContent.style.left ='10px'
+
     }else{
 
         navBar.style.display ='flex';
         mainContent.style.left ='225px'
 
     }
-    //$('.navigationBar').css({'display':'none'});
 
 }
 

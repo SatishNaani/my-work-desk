@@ -1,10 +1,29 @@
-import React, {useState} from 'react'
+import React, {useCallback, useEffect, useState} from 'react'
 import Box from '@mui/material/Box';
 import {Divider, ListItemIcon, ListItemText, MenuItem, MenuList, Paper} from "@mui/material";
 import Typography from "@mui/material/Typography";
 import {ContentCut} from "@mui/icons-material";
+import {getProjects} from "../services/projects";
+import {toast} from "react-toastify";
 
 function UserDetails() {
+    const [data, setData] = useState([]);
+    const onGetProjects = useCallback(() => {
+        getProjects()
+            .then(response => {
+                if (response) {
+                    let projectData = (response?.value || []).map((item, index) => {
+                        return {name: item.name, value: parseInt(Math.random() * 100)}
+                    });
+                    setData(projectData);
+                }
+            })
+            .catch(e => toast.error(e.message));
+    }, []);
+    useEffect(() => {
+        onGetProjects();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
     return (
         <div className="userDetails">
             <form style={{width: '210px'}}>
@@ -12,7 +31,7 @@ function UserDetails() {
                     <div>
                         <label>
                             <Typography variant="inherit" noWrap>
-                                User Name
+                                Default User
                             </Typography>
                         </label>
 
@@ -20,7 +39,7 @@ function UserDetails() {
                     <div>
                         <label>
                             <Typography variant="inherit" noWrap>
-                                User.Email@vistex.com
+                                default.user@vistex.com
                             </Typography>
                         </label>
 
@@ -28,7 +47,7 @@ function UserDetails() {
                     <div>
                         <label>
                             <Typography variant="inherit" noWrap>
-                                User Phone
+                                040 2311 4413
                             </Typography>
                         </label>
 
@@ -38,34 +57,19 @@ function UserDetails() {
                     <div style={{textAlign: "center"}}><label> All Projects</label></div>
 
                     <MenuList>
-                        <MenuItem style={{
-                            borderBottom: '1px solid rgba(0, 0, 0, 0.09)'
-                        }}>
-                            <Typography variant="inherit" noWrap>
-                                Project 1
-                            </Typography>
-                        </MenuItem>
-                        <MenuItem style={{
-                            borderBottom: '1px solid rgba(0, 0, 0, 0.09)'
-                        }}>
-                            <Typography variant="inherit" noWrap>
-                                Project 2
-                            </Typography>
-                        </MenuItem>
-                        <MenuItem style={{
-                            borderBottom: '1px solid rgba(0, 0, 0, 0.09)'
-                        }}>
-                            <Typography variant="inherit" noWrap>
-                                Project 3
-                            </Typography>
-                        </MenuItem>
-                        <MenuItem style={{
-                            borderBottom: '1px solid rgba(0, 0, 0, 0.09)'
-                        }}>
-                            <Typography variant="inherit" noWrap>
-                                Project 4
-                            </Typography>
-                        </MenuItem>
+                        {data.map(item => (
+                            <MenuItem style={{
+                                borderBottom: '1px solid rgba(0, 0, 0, 0.09)'
+                            }}
+                                      key={item.id}
+                                      value={item.id}
+                            >
+                                <Typography variant="inherit" noWrap>
+                                    {item.name}
+                                </Typography>
+                            </MenuItem>
+                        ))}
+
                     </MenuList>
 
                 </div>
