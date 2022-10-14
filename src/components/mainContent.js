@@ -8,10 +8,15 @@ function MainContent() {
             <Box sx={{
                 width: '100%',
                 height: '100%',
-                backgroundColor: 'white'
+                backgroundColor: 'white',
+                '& > :not(style)': {
+                    m: 0.25,
+                    width: '100%',
+                    height: '100%',
+                },
 
             }}>
-                <Paper elevation={6} sx={{
+                <Paper elevation={24} sx={{
                     width: '100%',
                     height: '100%',
                     backgroundColor: 'white'

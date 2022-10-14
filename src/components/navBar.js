@@ -12,13 +12,18 @@ function stringAvatar(name) {
 
 function NavBar() {
     return (
-        <div style={{position: "fixed", zIndex: 50, height: '100%'}}>
+        <div className="navigationBar" style={{position: "fixed", zIndex: 50, height: '100%'}}>
             <Box sx={{
                 width: 218,
                 height: '100%',
-                backgroundColor: 'white'
+                backgroundColor: 'white',
+                '& > :not(style)': {
+                   width: '100%',
+                    height: '100%',
+                },
+
             }}>
-                <Paper elevation={6} sx={{
+                <Paper elevation={24} sx={{
                     width: 218,
                     height: '100%',
                     backgroundColor: 'white'

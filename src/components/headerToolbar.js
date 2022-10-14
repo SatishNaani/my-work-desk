@@ -3,17 +3,52 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import {Button, IconButton, Link} from "@mui/material";
+import {Button, IconButton, Link, ToggleButton} from "@mui/material";
 import {useNavigate, useParams} from 'react-router';
 import Box from "@mui/material/Box";
 import LogoutIcon from '@mui/icons-material/Logout';
+import MenuIcon from '@mui/icons-material/Menu';
+
+const onMenuItemClick = (oEvt,a,selected)=>{
+
+    let navBar = document.getElementsByClassName('navigationBar')[0];
+    let mainContent =  document.getElementsByClassName('mainContent')[0];
+
+    if(!selected){
+        navBar.style.display ='none'
+        mainContent.style.left ='10px'
+    }else{
+
+        navBar.style.display ='flex';
+        mainContent.style.left ='225px'
+
+    }
+    //$('.navigationBar').css({'display':'none'});
+
+}
 
 const ResponsiveAppBar = () => {
     const navigator = useNavigate();
+    const [selected, setSelected] = React.useState(false);
     return (
         <Box sx={{ flexGrow: 1 }}>
             <AppBar position="fixed">
                 <Toolbar>
+
+                    <ToggleButton
+                        value="check"
+                        selected={selected}
+                        onChange={(event, value) => {
+                            setSelected(!selected);
+                            onMenuItemClick(event,value,selected);
+                        }}
+                    >
+                        <MenuIcon />
+                    </ToggleButton>
+
+
+
+
                     <Link
                         component="button"
                         variant="body2"
