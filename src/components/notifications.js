@@ -18,6 +18,7 @@ function Notifications() {
 
     return (
         <Paper elevation={3} >
+            <label className="tableTitle">Notifications</label>
             <TableContainer component={Paper}>
                 <Table aria-label="simple table">
                     <TableHead>

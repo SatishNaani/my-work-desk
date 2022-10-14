@@ -20,6 +20,8 @@ function ActiveTasks() {
 
     return (
         <Paper elevation={3} >
+
+            <label className="tableTitle">Active Tasks</label>
             <TableContainer component={Paper}>
                 <Table aria-label="simple table">
                     <TableHead>

@@ -31,38 +31,41 @@ function MainContent() {
 
                 }}>
 
+                   <div style={{display:'flex',flex:1}}>
 
-                    <Box
-                        sx={{
-                            display: 'flex',
-                            flexWrap: 'wrap',
-                            '& > :not(style)': {
-                                m: 1,
-                                width: 400,
-                                height: 128,
-                            },
-                        }}
-                    >
-                        <ActiveTasksCount/>
-                        <NewBugsCount/>
-                        <NotificationsCount/>
-
-                        <Box
+                       <Box width='600px'
                             sx={{
                                 display: 'flex',
                                 flexWrap: 'wrap',
                                 '& > :not(style)': {
-                                    width: 128,
+                                    m: 1,
+                                    width: 270,
                                     height: 128,
                                 },
                             }}
-                        > <PieChartArea/>
-                        </Box>
+                       >
+                           <ActiveTasksCount/>
+                           <NewBugsCount/>
+                           <NotificationsCount/>
+                       </Box>
+
+
+                       <Box
+                           sx={{
+                               display: 'flex',
+                               flexWrap: 'wrap',
+                               '& > :not(style)': {
+                                   width: 128,
+                                   height: 128,
+                               },
+                           }}
+                       > <PieChartArea/>
+                       </Box>
+
+                   </div>
 
 
 
-
-                    </Box>
 
 
 

@@ -8,6 +8,7 @@ function PieChartArea() {
 
     return (
         <Paper elevation={3} sx={{
+            margin:'8px',
             '&:hover': {
                  cursor:'pointer'
             }}}>

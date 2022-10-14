@@ -120,9 +120,12 @@ html,
     text-align: center;
 }
 .itemType{
-    position: relative;
-    top: -45px;
-    left: -105px;
+    position: absolute;
+    top: 10px;
     font-size: 18px;
     font-weight: 400;
+}
+
+.tableTitle{
+    margin: 15px;
 }

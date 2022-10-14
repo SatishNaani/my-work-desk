@@ -31,7 +31,7 @@ function ProjectTableContent() {
                 },
 
             }}>
-
+                <label className="tableTitle">Items </label>
                 <TableContainer component={Paper}>
                     <Table sx={{ minWidth: 650 }} aria-label="simple table">
                         <TableHead>
