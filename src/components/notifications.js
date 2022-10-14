@@ -53,7 +53,7 @@ function Notifications() {
 
 
     return (
-        <Paper elevation={3} style={{flex: 1 }} >
+        <Paper elevation={3} style={{flex: 1, maxHeight: '400px', overflow: 'auto' }} >
             <label className="tableTitle">Notifications</label>
             <TableContainer component={Paper}>
                 <Table aria-label="simple table">
