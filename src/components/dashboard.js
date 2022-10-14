@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import NavBar from "./navBar";
 import MainContent from "./mainContent";
 
-function UserDashboard() {
+function Dashboard() {
 
 
     return (
@@ -13,4 +13,4 @@ function UserDashboard() {
     )
 }
 
-export default UserDashboard
+export default Dashboard

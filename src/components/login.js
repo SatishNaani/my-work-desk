@@ -11,7 +11,7 @@ function Login() {
         console.log(email);
         console.log(password);
         let val = '12244'
-        navigator(`/UserDashboard/${val}`);
+        navigator(`/Dashboard/${val}`);
     }
 
     return (

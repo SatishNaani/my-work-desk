@@ -53,7 +53,7 @@ const ResponsiveAppBar = () => {
                         component="button"
                         variant="body2"
                         onClick={() => {
-                            navigator(`/UserDashboard`);
+                            navigator(`/Dashboard`);
                         }}
                     >
                         <div className="vistexTitle"></div>
