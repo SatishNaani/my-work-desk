@@ -1,6 +1,14 @@
 import React, {useState} from 'react'
 import Box from '@mui/material/Box';
-import {Paper} from "@mui/material";
+import {Divider, Paper} from "@mui/material";
+import ProjectTableContent from "./projectTableContent";
+import ActiveTasks from "./activeTasks";
+import Bugs from "./bugs";
+import Notifications from "./notifications";
+import ActiveTasksCount from "./activeTasksCount";
+import NewBugsCount from "./newBugsCount";
+import NotificationsCount from "./notificationsCount";
+import PieChartArea from "./pieChartArea";
 
 function MainContent() {
     return (
@@ -16,12 +24,67 @@ function MainContent() {
                 },
 
             }}>
-                <Paper elevation={24} sx={{
+                <Paper elevation={6} sx={{
                     width: '100%',
                     height: '100%',
                     backgroundColor: 'white'
 
-                }}> helccccclo</Paper>
+                }}>
+
+
+                    <Box
+                        sx={{
+                            display: 'flex',
+                            flexWrap: 'wrap',
+                            '& > :not(style)': {
+                                m: 1,
+                                width: 400,
+                                height: 128,
+                            },
+                        }}
+                    >
+                        <ActiveTasksCount/>
+                        <NewBugsCount/>
+                        <NotificationsCount/>
+
+                        <Box
+                            sx={{
+                                display: 'flex',
+                                flexWrap: 'wrap',
+                                '& > :not(style)': {
+                                    width: 128,
+                                    height: 128,
+                                },
+                            }}
+                        > <PieChartArea/>
+                        </Box>
+
+
+
+
+                    </Box>
+
+
+
+                    <Divider variant="middle" style={{border: '1px solid'}} />
+                    <Box
+                        sx={{
+                            display: 'flex',
+                            flexWrap: 'wrap',
+                            '& > :not(style)': {
+                                m: 1
+                            },
+                        }}
+                    >
+                        <ActiveTasks/>
+                        <Bugs/>
+                        <Notifications/>
+
+
+                    </Box>
+                    <ProjectTableContent/>
+
+                </Paper>
             </Box>
 
         </div>
