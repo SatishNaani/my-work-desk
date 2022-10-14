@@ -34,7 +34,7 @@ function NavBar() {
                     <div style={{width: '220px', top: '50px', position: 'relative'}}>
                         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
                             <Stack direction="row" spacing={2}>
-                                <Avatar style={{background: '#1976d2'}} {...stringAvatar('Default User')}
+                                <Avatar style={{background: '#1976d2'}} {...stringAvatar('Anil Talla')}
                                         sx={{width: 85, height: 85}}/>
                             </Stack>
                         </div>
