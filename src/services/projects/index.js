@@ -4,7 +4,7 @@ import api from '../communication';
 
 const getProjects = (id) =>
     trackPromise(
-        api.get(`projects/`)
+        api.get(`_apis/projects?api-version=3.2-preview.1`)
     );
 
 export {
