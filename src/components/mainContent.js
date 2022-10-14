@@ -55,8 +55,6 @@ function MainContent() {
                                display: 'flex',
                                flexWrap: 'wrap',
                                '& > :not(style)': {
-                                   width: 128,
-                                   height: 128,
                                },
                            }}
                        > <PieChartArea/>
