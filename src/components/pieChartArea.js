@@ -13,7 +13,7 @@ import {
 
 import {getProjects} from '../services/projects';
 
-const COLORS = ['#43a047', '#e74c3c', '#ff8000', '#b45f55'];
+const COLORS = ['#43a047', '#e74c3c', '#ff8000', '#b45f55', '#c62a55', '#72g45'];
 
 function PieChartArea() {
     const [data, setData] = useState([]);
@@ -59,13 +59,13 @@ function PieChartArea() {
                     }}>
                         <Box sx={{width: 400, height: '100%', minHeight: 250 }}>
                             <ResponsiveContainer width="100%" height="100%">
-                                <PieChart width={400} height={330}>
+                                <PieChart width={330} height={330}>
                                     <Pie
                                         data={data}
                                         cx="50%"
                                         cy="50%"
                                         labelLine={false}
-                                        label
+                                        label={'Work Items'}
                                         outerRadius={80}
                                         fill="#8884d8"
                                         dataKey="value"
@@ -79,7 +79,7 @@ function PieChartArea() {
                                     </Pie>
                                     <Legend
                                         layout="vertical"
-                                        verticalAlign="top"
+                                        verticalAlign="bottom"
                                         align="right"
                                     />
                                     <Tooltip/>

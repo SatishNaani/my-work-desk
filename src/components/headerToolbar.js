@@ -64,7 +64,7 @@ const ResponsiveAppBar = () => {
                         left:'30%'
 
                     }}>
-                        Welcome to vistex work desk
+                        Welcome to Vistex WorkDesk
                     </Typography>
                     <Button variant="contained" endIcon={<LogoutIcon />}/>
 
