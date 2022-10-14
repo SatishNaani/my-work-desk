@@ -9,7 +9,7 @@ function NotificationsCount() {
     return (
 
         <Paper elevation={3} className="countClass" sx={{
-            minWidth:'270px',
+            minWidth:'400px',
             flex:1,
             '&:hover': {
                 backgroundColor: '#F1F3F6',
@@ -17,8 +17,8 @@ function NotificationsCount() {
                 opacity: [0.9, 0.8, 0.7],
             }
         }}>
-            <label className="itemType">Notifications</label>
-            <label style={{fontSize: '40px', color: "#256f3a", textOverflow: 'ellipsis'}}>121</label>
+            <label className="itemType">Customer Bugs</label>
+            <label style={{fontSize: '40px', color: "rgb(255, 128, 0)", textOverflow: 'ellipsis'}}>21</label>
         </Paper>
 
     )
