@@ -35,7 +35,7 @@ function UserDetails() {
                     </div>
                 </div>
                 <div style={{position: "relative", top: "70px"}}>
-                    <div style={{textAlign: "center"}}><label> List of Projects</label></div>
+                    <div style={{textAlign: "center"}}><label> Projects</label></div>
 
                     <MenuList>
                         <MenuItem style={{
