@@ -96,7 +96,7 @@ html,
     position: relative;
     left:225px;
     height: 100vh;
-    width:100%;
+    width:calc(100% - 225px);
 
 }
 

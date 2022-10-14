@@ -17,7 +17,7 @@ function Bugs() {
 
 
     return (
-        <Paper elevation={3} >
+        <Paper elevation={3} style={{flex: 1 }}>
             <label className="tableTitle">Bugs</label>
             <TableContainer component={Paper}>
                 <Table aria-label="simple table">

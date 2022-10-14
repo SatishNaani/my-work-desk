@@ -19,7 +19,7 @@ function ActiveTasks() {
 
 
     return (
-        <Paper elevation={3} >
+        <Paper elevation={3} style={{flex: 1 }}>
 
             <label className="tableTitle">Active Tasks</label>
             <TableContainer component={Paper}>

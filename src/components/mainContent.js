@@ -33,8 +33,7 @@ function MainContent() {
 
                    <div style={{display:'flex',flex:1}}>
 
-                       <Box width='600px'
-                            sx={{
+                       <Box sx={{
                                 display: 'flex',
                                 flexWrap: 'wrap',
                                 '& > :not(style)': {

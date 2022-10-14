@@ -57,7 +57,7 @@ function PieChartArea() {
                         backgroundColor: 'white'
 
                     }}>
-                        <Box sx={{width: 300, height: 230}}>
+                        <Box sx={{width: 400, height: '100%' }}>
                             <ResponsiveContainer width="100%" height="100%">
                                 <PieChart width={400} height={330}>
                                     <Pie
