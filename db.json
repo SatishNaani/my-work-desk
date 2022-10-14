@@ -2,19 +2,19 @@
   "projects": [
     {
       "name": "GTMS",
-      "count": "20"
+      "count": 20
     },
     {
       "name": "eGTMS",
-      "count": "12"
+      "count": 12
     },
     {
       "name": "Calender",
-      "count": "50"
+      "count": 50
     },
     {
       "name": "eGTMS",
-      "count": "10"
+      "count": 10
     }
   ]
 }
