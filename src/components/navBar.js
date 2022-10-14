@@ -11,6 +11,8 @@ function stringAvatar(name) {
 }
 
 function NavBar() {
+
+
     return (
         <div className="navigationBar" style={{position: "fixed", zIndex: 50, height: '100%'}}>
             <Box sx={{
