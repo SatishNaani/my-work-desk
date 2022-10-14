@@ -22,8 +22,8 @@ function PieChartArea() {
         getProjects()
             .then(response => {
                 if (response) {
-                    let projectData = response.map((item) => {
-                        return {name: item.name, value: item.count}
+                    let projectData = (response?.value || []).map((item, index) => {
+                        return {name: item.name, value: parseInt(Math.random() * 100) }
                     });
                     setData(projectData);
                 }
