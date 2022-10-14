@@ -31,7 +31,7 @@ function UserDetails() {
                     <div>
                         <label>
                             <Typography variant="inherit" noWrap>
-                                Default User
+                                Anil Talla
                             </Typography>
                         </label>
 
@@ -39,7 +39,7 @@ function UserDetails() {
                     <div>
                         <label>
                             <Typography variant="inherit" noWrap>
-                                default.user@vistex.com
+                                anil.talla@vistex.com
                             </Typography>
                         </label>
 
