@@ -25,6 +25,14 @@ const getBugTasksIds = () =>
           })
     );
 
+    const getNotification = () => 
+    trackPromise(
+        api.post(`_apis/wit/wiql?api-version=6.0`, {
+
+            "query": "Select [System.Id], [System.Title], [System.State] From WorkItems Where ( [System.CreatedDate] >= '2022-10-14T00:00:00.000Z' ) AND [Assigned To] = 'supriya.marri@vistex.com' order by [Microsoft.VSTS.Common.Priority] asc, [System.CreatedDate] desc"
+          
+          })
+    );
 
 
 const getTasks = (data) => trackPromise(
@@ -35,5 +43,6 @@ export {
     getProjects,
     getTasks,
     getBugTasksIds,
-    getTasksIds
+    getTasksIds,
+    getNotification
 };

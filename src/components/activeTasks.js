@@ -30,12 +30,12 @@ function ActiveTasks() {
                         "System.Id",
                         "System.Title",
                         "System.WorkItemType",
-                        "Microsoft.VSTS.Scheduling.RemainingWork"
+                        "Microsoft.VSTS.Scheduling.RemainingWork",
+                        "Microsoft.VSTS.Common.Severity"
                     ]
                 })
             .then(response => {
                 if (response) {
-                    debugger;
                     let projectData = (response?.value || []).map((item, index) => {
                         return {id: item.fields["System.Id"], title: item.fields["System.Title"], type: item.fields["System.WorkItemType"] }
                     });
@@ -53,7 +53,7 @@ function ActiveTasks() {
 
 
     return (
-        <Paper elevation={3} style={{flex: 1 }}>
+        <Paper elevation={3} style={{flex: 1, maxHeight: '300px', overflow: 'auto' }}>
 
             <label className="tableTitle">Active Tasks</label>
             <TableContainer component={Paper}>

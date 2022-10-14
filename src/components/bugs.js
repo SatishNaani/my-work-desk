@@ -31,7 +31,8 @@ function Bugs() {
                         "System.Id",
                         "System.Title",
                         "System.WorkItemType",
-                        "Microsoft.VSTS.Scheduling.RemainingWork"
+                        "Microsoft.VSTS.Scheduling.RemainingWork",
+                        "Microsoft.VSTS.Common.Severity"
                     ]
                 })
             .then(response => {
