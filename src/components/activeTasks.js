@@ -53,7 +53,7 @@ function ActiveTasks() {
 
 
     return (
-        <Paper elevation={3} style={{flex: 1, maxHeight: '300px', overflow: 'auto' }}>
+        <Paper elevation={3} style={{flex: 1, maxHeight: '400px', overflow: 'auto' }}>
 
             <label className="tableTitle">Active Tasks</label>
             <TableContainer component={Paper}>
